@@ -4,8 +4,6 @@
 # require 'sinatra/reloader' if development?
 
 require 'sinatra'
-require 'erb'
-require 'sass'
 require './bets'
 
 # configure :development, :test do     
@@ -18,12 +16,10 @@ require './bets'
 
 configure :development do
   DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/bet.db")
-  DataMapper.auto_migrate!
 end
 
 configure :production do
-  DataMapper.setup(:default, ENV['DATABASE_URL'])
-  DataMapper.auto_migrate!
+  DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/bet.db')
 end
 
 Bets.auto_migrate! unless DataMapper.repository(:default).adapter.storage_exists?('bets')
