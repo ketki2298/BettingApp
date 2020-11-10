@@ -1,7 +1,6 @@
+require 'dm-core'
 require 'dm-migrations'
 
-
-DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/bet.db")
 
 class Bets
     include DataMapper::Resource
