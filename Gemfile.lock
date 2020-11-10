@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
@@ -19,15 +19,12 @@ GEM
     dm-sqlite-adapter (1.2.0)
       dm-do-adapter (~> 1.2.0)
       do_sqlite3 (~> 0.10.6)
-    dm-timestamps (1.2.0)
-      dm-core (~> 1.2.0)
     do_postgres (0.10.17)
       data_objects (= 0.10.17)
     do_sqlite3 (0.10.17)
       data_objects (= 0.10.17)
     eventmachine (1.2.7)
     ffi (1.13.1)
-    multi_json (1.15.0)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     pg (1.2.3)
@@ -49,14 +46,6 @@ GEM
       rack (~> 2.2)
       rack-protection (= 2.1.0)
       tilt (~> 2.0)
-    sinatra-contrib (2.1.0)
-      multi_json
-      mustermann (~> 1.0)
-      rack-protection (= 2.1.0)
-      sinatra (= 2.1.0)
-      tilt (~> 2.0)
-    sinatra-reloader (1.0)
-      sinatra-contrib
     slim (4.1.0)
       temple (>= 0.7.6, < 0.9)
       tilt (>= 2.0.6, < 2.1)
@@ -75,11 +64,9 @@ DEPENDENCIES
   dm-migrations
   dm-postgres-adapter
   dm-sqlite-adapter
-  dm-timestamps
   pg
   sass
   sinatra
-  sinatra-reloader
   slim
   thin
 
