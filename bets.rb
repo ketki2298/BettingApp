@@ -1,6 +1,11 @@
 require 'dm-core'
 require 'dm-migrations'
 
+configure do
+    enable :sessions
+    set :username, "ketki"
+    set :password, "password"
+end
 
 class Bets
     include DataMapper::Resource
