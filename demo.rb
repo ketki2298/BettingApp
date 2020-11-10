@@ -1,14 +1,29 @@
-require 'sinatra'
-require './bets'
-require "bundler/setup"
-require 'sinatra/reloader' if development?
+# require 'sinatra'
+# require './bets'
+# require "bundler/setup"
+# require 'sinatra/reloader' if development?
 
-configure :development, :test do     
+require 'sinatra'
+require 'erb'
+require 'sass'
+require './bets'
+
+# configure :development, :test do     
+#   DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/bet.db")
+# end
+
+# configure :production do
+#   DataMapper.setup(:default, ENV['DATABASE_URL'])
+# end
+
+configure :development do
   DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/bet.db")
+  DataMapper.auto_migrate!
 end
 
 configure :production do
   DataMapper.setup(:default, ENV['DATABASE_URL'])
+  DataMapper.auto_migrate!
 end
 
 Bets.auto_migrate! unless DataMapper.repository(:default).adapter.storage_exists?('bets')
