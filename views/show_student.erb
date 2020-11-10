@@ -1,0 +1,21 @@
+<h1> <%= @students.name %> </h1>
+<p> 
+    Release Date: <%= @students.birthday.strftime("%B %e %Y") if @students.birthday %>
+</p>
+<p> 
+    Score: <%= @students.score %>%
+</p>
+<p> 
+    Grade: <%= @students.grade %>
+</p>
+<p> 
+    <a href="/students">Back to Student Directory</a> </p>
+<p> 
+    <a href="/students/<%= @students.id%>/edit">Edit
+    </a>
+</p>
+
+<form action="/students/<%= @students.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE"/>
+  <input type="submit" value="delete this song"/>
+  </form>
