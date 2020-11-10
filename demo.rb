@@ -19,7 +19,7 @@ configure :development do
 end
 
 configure :production do
-  DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/bet.db")
+  DataMapper.setup(:default, ENV['DATABASE_URL'])
 end
 
 Bets.auto_migrate! unless DataMapper.repository(:default).adapter.storage_exists?('bets')
