@@ -1,7 +1,6 @@
 require 'sinatra'
-require 'sinatra/reloader'
 require './bets'
-
+require "bundler/setup"
 
 
 enable :sessions
