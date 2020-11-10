@@ -1,6 +1,4 @@
 require 'sinatra'
-require 'erb'
-require 'sass'
 require './bets'
 
 configure do
@@ -14,7 +12,7 @@ configure :development do
 end
 
 configure :production do
-  DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgresql://localhost/bet.db')
+  DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/bet.db')
 end
 
 get '/' do
