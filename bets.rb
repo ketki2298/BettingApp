@@ -17,7 +17,6 @@ class Bets
     property :loss, Integer
     property :profit, Integer
 end
-DataMapper.auto_upgrade!
 DataMapper.finalize
 
 
