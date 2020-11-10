@@ -14,7 +14,7 @@ configure :development do
 end
 
 configure :production do
-  DataMapper.setup(:default, ENV['DATABASE_URL'] || 'sqlite3://localhost/bet.db')
+  DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/bet.db')
 end
 
 get '/' do
