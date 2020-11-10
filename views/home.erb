@@ -1,0 +1,57 @@
+<html>
+<head><title>Login Page</title></head>
+<link href="style.css" rel="stylesheet" type="text/css">
+<body>
+    <div  class="header">
+        <h1>Gambling Site</h1>
+    </div>
+    <div>
+        <div>
+            <h2>Place your bet on dice number (1 to 6)</h2>
+            
+            <div class="placeBet">
+            <% if session[:result] %>
+                <h3><%= session[:result] %></h3>
+                <% session[:result] = nil%>
+            <% end %>
+            <form action="/placeBet" method='post'>
+                <label class="betLabel"> Bet money: </label>
+                <br>
+                <input name="betAmount" class="betInput" type="number"></input>
+                <br>
+                <label class="betLabel"> On: </label>
+                <br>
+                <input name="betOn" class="betInput" type="number"></input>
+                <br>
+                <input class="submitBet" type="submit" value="Bet"></input>
+            </form>
+            </div>
+        </div>
+
+        <div class="currentStats">
+            <label class="currentLabel"> Total Win: </label>
+            <input class="currentInput" type="number" value="<%= session[:win] %>" readonly></input>
+            <br>
+            <label class="currentLabel"> Total Loss: </label>
+            <input class="currentInput" type="number" value="<%= session[:loss] %>" readonly></input>
+            <br>
+            <label class="currentLabel"> Total Profit: </label>
+            <input class="currentInput" type="number" value="<%= session[:profit] %>" readonly></input>
+            <br>
+        </div>
+    </div>
+    <label class="account">Account<label>
+    <div class="accountStats">
+        <label class="accLabels"> Total Win: </label>
+        <label class="accLabels1"> Total Loss: </label>
+        <label class="accLabels1"> Total Profit: </label>
+        <br>
+        <input class="accInput" type="number" value="<%= @users.win%>" readonly></input>
+        <input class="accInput" type="number" value="<%= @users.loss%>" readonly></input>
+        <input class="accInput" type="number" value="<%= @users.profit%>" readonly></input>
+        <br>
+    </div>
+    <br>
+    <a href="/logout">Logout</a>
+</body>
+</html>

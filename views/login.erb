@@ -1,0 +1,25 @@
+<html>
+<head><title>Login Page</title></head>
+<link href="style.css" rel="stylesheet" type="text/css">
+<body>
+    <div  class="header">
+        <h1>Gambling Site</h1>
+    </div>
+    
+    <div class="loginBox">
+        <% if session[:message] %>
+            <h2><%= session[:message] %></h2>
+            <% session[:message] = nil%>
+        <% end %>
+        <form action="/login" method='post'>
+            <label class="loginLabel">Username</label>
+            <input class="loginInput" name="username" type="text"></input>
+            <br>
+            <label class="loginLabel">Password</label>
+            <input class="loginInput" name="password" type="password"></input>
+            <br>
+            <input class="loginBtn" type="submit"></input>
+        </form>
+    </div>
+</body>
+</html>
