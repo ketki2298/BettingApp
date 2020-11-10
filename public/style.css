@@ -1,0 +1,145 @@
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: lavender;
+}
+
+h3{
+    margin-left: 20px;
+    color: blue;
+    margin-top: -20px;
+}
+
+h1{
+    margin-left: 20px;
+    vertical-align: middle;
+    padding-top: 20px;
+}
+
+.loginBox{
+    margin-top: 150px;
+    margin-left: 30%;
+    width: 65%;
+    float: left;
+    height: 40%;
+}
+
+.loginLabel{
+    font-size: 35px;
+    padding: 10px;
+    font-weight: 300;
+}
+
+.loginBtn{
+    margin-left: 25%;
+    width: 18%;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.loginInput{
+    font-size: 25px;
+    padding: 10px;
+    font-weight: 200;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 40%;
+}
+
+.placeBet{
+    margin-top: 20px;
+    width: 65%;
+    float: left;
+    height: 40%;
+}
+
+.betLabel{
+    font-size: 35px;
+    padding: 10px;
+    font-weight: 300;
+}
+
+.betInput{
+    font-size: 25px;
+    padding: 10px;
+    font-weight: 200;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.submitBet{
+    margin-left: 350px;
+    width: 15%;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.currentStats{
+    width: 34%;
+    float: right;
+    height: 40%;
+    border: 3px solid black;
+}
+
+.currentLabel{
+    font-size: 35px;
+    padding: 10px;
+    font-weight: 300;
+    width: 100%;
+}
+
+.currentInput{
+    font-size: 25px;
+    padding: 10px;
+    font-weight: 200;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+.accountStats{
+    width: 98%;
+    border: 3px solid black;
+    padding: 10px;
+}
+
+.accLabels1{
+    margin-left: 22% !important;
+}
+
+.accLabels, .accLabels1{
+    font-size: 30px;
+    font-weight: 300;
+    width: 300px;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+.account{
+    margin-bottom: 10px;
+    width: 100%;
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.accInput{
+    font-size: 25px;
+    padding: 10px;
+    font-weight: 200;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    width: 30%;
+}
+
+a{
+    margin-top: 30px;
+    background-color: rgb(226, 223, 223);
+    font-size: 30px;
+    border-radius: 5px;
+    width: 10%;
+    border: 1px solid gray;
+    color: black;
+    text-decoration: none;
+}
