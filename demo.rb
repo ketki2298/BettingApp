@@ -8,7 +8,7 @@ configure :development, :test do
 end
 
 configure :production do
-  DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/bet.db')
+  DataMapper.setup(:default, ENV['DATABASE_URL'])
 end
 
 Bets.auto_migrate! unless DataMapper.repository(:default).adapter.storage_exists?('bets')
