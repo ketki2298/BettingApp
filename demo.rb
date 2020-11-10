@@ -2,6 +2,9 @@ require 'sinatra'
 require './bets'
 require "bundler/setup"
 
+configure :development, :test do     
+  DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/bet.db")
+end
 
 enable :sessions
 set :username, "ketki"
