@@ -25,6 +25,7 @@ GEM
       data_objects (= 0.10.17)
     do_sqlite3 (0.10.17)
       data_objects (= 0.10.17)
+    erb (2.2.0)
     eventmachine (1.2.7)
     ffi (1.13.1)
     multi_json (1.15.0)
@@ -57,10 +58,6 @@ GEM
       tilt (~> 2.0)
     sinatra-reloader (1.0)
       sinatra-contrib
-    slim (4.1.0)
-      temple (>= 0.7.6, < 0.9)
-      tilt (>= 2.0.6, < 2.1)
-    temple (0.8.2)
     thin (1.7.2)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
@@ -76,11 +73,11 @@ DEPENDENCIES
   dm-postgres-adapter
   dm-sqlite-adapter
   dm-timestamps
+  erb
   pg
   sass
   sinatra
   sinatra-reloader
-  slim
   thin
 
 BUNDLED WITH

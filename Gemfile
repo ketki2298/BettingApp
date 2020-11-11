@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 gem "sinatra"
 gem "sinatra-reloader"
-gem "slim"
+gem "erb"
 gem "sass"
 gem "dm-core"
 gem "dm-migrations"
