@@ -3,7 +3,7 @@ require 'dm-core'
 require 'dm-migrations'
 
 enable 'sessions'
-DataMapper.setup(:default,ENV['DATABASE_URL']||"sqlite3://#{Dir.pwd}/gambling.db")
+DataMapper.setup(:default,ENV['DATABASE_URL']||"sqlite3://#{Dir.pwd}/bet.db")
 
 
 class Bets
@@ -25,15 +25,15 @@ end
 
 
 configure :development do
-DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/bet.db")
+  DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/bet.db")
 end
 
 configure :development, :test do
-DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/bet.db")
+  DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/bet.db")
 end
 
 configure :production do
-DataMapper.setup(:default, ENV['DATABASE_URL'])
+  DataMapper.setup(:default, ENV['DATABASE_URL'])
 end
 
 get '/' do
