@@ -12,7 +12,7 @@ configure :development do
 end
 
 configure :production do
-  DataMapper.setup(:default, 'postgres://localhost/bet.db' || ENV['DATABASE_URL'])
+  DataMapper.setup(:default, 'postgres://localhost/bet' || ENV['DATABASE_URL'])
 end
 
 get '/' do
