@@ -16,6 +16,7 @@ configure :production do
 end
 
 get '/' do
+    @users = Bets.first()
     if session[:login]
         erb :home
       else
