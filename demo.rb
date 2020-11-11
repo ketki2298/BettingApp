@@ -46,7 +46,7 @@ end
 
 
 post '/login' do
-    Bets.first_or_create({:id => 1, :user => 'ketki', :password => '12345', :win => 0, :loss => 0, :profit => 0 })
+    Bets.first_or_create({:user => 'ketki', :password => '12345', :win => 0})
     @users = Bets.first(user: params[:username])
     puts @users[:password]
     puts @users[:user]
@@ -103,9 +103,7 @@ get '/logout' do
     w = session[:win] + user[:win]
     l = session[:loss] + user[:loss]
     p = session[:profit] + user[:profit]
-    sessionScore = {:id => user[:id],:user => session[:user], :password => user[:password], :win => w, :loss => l, :profit => p}
-    puts sessionScore
-    puts user.update(sessionScore)
+    puts user.update(:win => w,:loss => l, :profit => p)
 
     session.clear
     session[:message] = "successufully logged out"
