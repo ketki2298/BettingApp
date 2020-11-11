@@ -46,7 +46,7 @@ end
 
 
 post '/login' do
-    Bets.first_or_create({:User_name => 'ketki', :Password => '12345'})
+    Bets.first_or_create({:user => 'ketki', :password => '12345'})
     @users = Bets.first(user: params[:username])
     puts @users[:password]
     puts @users[:user]
